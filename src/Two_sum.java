@@ -1,6 +1,7 @@
 
 public class Two_sum {
 
+    // not ideal but my original attempt
     public static void checkPalindrome(String s) {
         String rvrsd = "";
         for (int i = 0; i < s.length(); i++) {
@@ -12,6 +13,7 @@ public class Two_sum {
         else System.out.println("Word is not a palindrome!");
     }
 
+    // optimal approach, avoids concatenation
     public static String reverseString(String str) {
         char[] newArray = str.toCharArray();
         int left = 0;
