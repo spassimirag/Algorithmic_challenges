@@ -1,0 +1,124 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//TIP To <b>Run</b> code, press <shortcut actionId=\"Run\"/> or\n// click the <icon src=\"AllIcons.Actions.Execute\"/> icon in the gutter.\npublic class Main {\n    public static void main(String[] args) {\n\n        //String lastString = \"Geeks\";\n       // String rvrsd = Two_sum.reverseString(lastString);\n       // System.out.println(\"Reversed string + \" + rvrsd);\n\n\n        String string = \"Test\";\n        String string1 = \"Test\";\n       // System.out.println(string.charAt(2));\n       // System.out.println(string1.concat(string));\n        //System.out.println(string.contains(string1));\n       // System.out.println((string.contentEquals(string1)));\n       // System.out.print(string.indexOf(\"e\"));\n\n        String testing = \"Varna\";\n       Two_sum.checkPalindrome(testing);\n        //Method 3\n    }\n\n\n}\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision f96abb920496da08ea8414179bb0b854e80e2cbf)
++++ b/src/Main.java	(date 1732391204556)
+@@ -1,5 +1,3 @@
+-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+ public class Main {
+     public static void main(String[] args) {
+ 
+@@ -16,9 +14,9 @@
+        // System.out.println((string.contentEquals(string1)));
+        // System.out.print(string.indexOf("e"));
+ 
+-        String testing = "Varna";
+-       Two_sum.checkPalindrome(testing);
+-        //Method 3
++    String testing = "Varna";
++    Two_sum.checkPalindrome(testing);
++        
+     }
+ 
+ 
+Index: src/Two_sum.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\npublic class Two_sum {\n\n    public static void checkPalindrome(String s) {\n        String rvrsd = \"\";\n        for (int i = 0; i < s.length(); i++) {\n            rvrsd = s.charAt(i) + rvrsd;\n        }\n        if (s.equalsIgnoreCase(rvrsd)) {\n           System.out.println(\"Word is a palindrome!\");\n        }\n        else System.out.println(\"Word is not a palindrome!\");\n    }\n\n    public static String reverseString(String str) {\n        char[] newArray = str.toCharArray();\n        int left = 0;\n        int right = newArray.length - 1;\n\n        while (left < right) {\n            char temp = newArray[left];\n            newArray[left] = newArray[right];\n            newArray[right] = temp;\n            left++;\n            right--;\n\n        }\n\n        return new String(newArray);\n    }\n\n\n}\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Two_sum.java b/src/Two_sum.java
+--- a/src/Two_sum.java	(revision f96abb920496da08ea8414179bb0b854e80e2cbf)
++++ b/src/Two_sum.java	(date 1732391204556)
+@@ -1,6 +1,7 @@
+ 
+ public class Two_sum {
+ 
++    // not ideal but my original attempt
+     public static void checkPalindrome(String s) {
+         String rvrsd = "";
+         for (int i = 0; i < s.length(); i++) {
+@@ -12,6 +13,7 @@
+         else System.out.println("Word is not a palindrome!");
+     }
+ 
++    // optimal approach, avoids concatenation
+     public static String reverseString(String str) {
+         char[] newArray = str.toCharArray();
+         int left = 0;
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"348f5d9e-f611-4895-9410-f6b286b7bf0e\" name=\"Changes\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;spassimirag&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;git@github.com:spassimirag/Algorithmic_challenges.git&quot;,\n    &quot;accountId&quot;: &quot;5b81d66a-dbb8-4c4d-8837-482f72100200&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 1\n}</component>\n  <component name=\"ProjectId\" id=\"2pB3kbrenKVuqnX5MD2AST98OLA\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Application.Main.executor\": \"Run\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"RunOnceActivity.git.unshallow\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"onboarding.tips.debug.path\": \"/Users/spasimiragenova/Documents/algorithmic_challenges/src/Main.java\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193\" />\n        <option value=\"bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"348f5d9e-f611-4895-9410-f6b286b7bf0e\" name=\"Changes\" comment=\"\" />\n      <created>1732225787012</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1732225787012</updated>\n      <workItem from=\"1732225788062\" duration=\"4726000\" />\n      <workItem from=\"1732270866481\" duration=\"1162000\" />\n      <workItem from=\"1732285172902\" duration=\"11158000\" />\n      <workItem from=\"1732389181823\" duration=\"396000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/Main.java</url>\n          <line>19</line>\n          <option name=\"timeStamp\" value=\"1\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision f96abb920496da08ea8414179bb0b854e80e2cbf)
++++ b/.idea/workspace.xml	(date 1732391271471)
+@@ -4,7 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="348f5d9e-f611-4895-9410-f6b286b7bf0e" name="Changes" comment="" />
++    <list default="true" id="348f5d9e-f611-4895-9410-f6b286b7bf0e" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -40,22 +42,22 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.Main.executor": "Run",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "main",
+-    "kotlin-language-version-configured": "true",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "onboarding.tips.debug.path": "/Users/spasimiragenova/Documents/algorithmic_challenges/src/Main.java",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/spasimiragenova/Documents/algorithmic_challenges/src/Main.java&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+@@ -75,7 +77,8 @@
+       <workItem from="1732225788062" duration="4726000" />
+       <workItem from="1732270866481" duration="1162000" />
+       <workItem from="1732285172902" duration="11158000" />
+-      <workItem from="1732389181823" duration="396000" />
++      <workItem from="1732389181823" duration="1191000" />
++      <workItem from="1732391161632" duration="110000" />
+     </task>
+     <servers />
+   </component>
