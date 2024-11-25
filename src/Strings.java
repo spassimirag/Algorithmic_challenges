@@ -1,5 +1,7 @@
+import java.util.HashMap;
+import java.util.Locale;
 
-public class Two_sum {
+public class Strings {
 
     public static void checkPalindrome(String s) {
         String rvrsd = "";
@@ -7,9 +9,8 @@ public class Two_sum {
             rvrsd = s.charAt(i) + rvrsd;
         }
         if (s.equalsIgnoreCase(rvrsd)) {
-           System.out.println("Word is a palindrome!");
-        }
-        else System.out.println("Word is not a palindrome!");
+            System.out.println("Word is a palindrome!");
+        } else System.out.println("Word is not a palindrome!");
     }
 
     // with boolean
@@ -41,7 +42,7 @@ public class Two_sum {
     }
 
 
-public static String reverseString(String str) {
+    public static String reverseString(String str) {
         char[] newArray = str.toCharArray();
         int left = 0;
         int right = newArray.length - 1;
@@ -57,6 +58,22 @@ public static String reverseString(String str) {
 
         return new String(newArray);
     }
+
+    // count consonants and vowels;
+    public static void countVowsAndCons(String str) {
+        int countCons = 0;
+        int countVowels = 0;
+        str = str.toLowerCase();
+
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                countVowels++;
+            } else if (c >= 'a' && c <= 'z') {
+                countCons++;
+            }
+
+        }
+        System.out.println("String has " + countCons + " consonants and " + countVowels + " vowels");
+    }
 }
-
-

@@ -14,9 +14,9 @@ public class Main {
        // System.out.println((string.contentEquals(string1)));
        // System.out.print(string.indexOf("e"));
 
-    String testing = "Varna";
-    Two_sum.checkPalindrome(testing);
-        
+    String testing = "Sos";
+    Strings.checkPalindrome(testing);
+    Strings.countVowsAndCons(testing);
     }
 
 
