@@ -76,4 +76,18 @@ public class Strings {
         }
         System.out.println("String has " + countCons + " consonants and " + countVowels + " vowels");
     }
+
+    // Find the first non-repeating character;
+    public static void firstNonRepeatingChar(String str) {
+        String string = str.toLowerCase();
+
+        for (int i = 0; i < string.length() - 1; i++) {
+            char c = string.charAt(i + 1);
+            if (string.charAt(i) != c && (c >= 'a' && c <= 'z')) {
+                System.out.println(c);
+                break;
+            }
+        }
+
+    }
 }

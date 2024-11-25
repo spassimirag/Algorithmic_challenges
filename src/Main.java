@@ -14,9 +14,10 @@ public class Main {
        // System.out.println((string.contentEquals(string1)));
        // System.out.print(string.indexOf("e"));
 
-    String testing = "Sos";
+    String testing = "AaBbCcDdEe";
     Strings.checkPalindrome(testing);
     Strings.countVowsAndCons(testing);
+    Strings.firstNonRepeatingChar(testing);
     }
 
 
