@@ -41,7 +41,7 @@ public class Strings {
         return true;
     }
 
-
+    // reverse a String
     public static String reverseString(String str) {
         char[] newArray = str.toCharArray();
         int left = 0;
